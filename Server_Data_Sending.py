@@ -186,7 +186,7 @@ def dis_conversion(number_list):
             result_hex = '0'+result_hex
         result_str += result_hex
     result = Twos_Complement(result_str, 4)
-    result = (result-16339000)/699.6956*(1.01)
+    result = result*0.001444961 +500 
     return result
 
 # float acc_conversion(list number_list)
@@ -244,7 +244,7 @@ def strain_conversion(number_list):
             result_hex = '0'+result_hex
         result_str += result_hex
     result = Twos_Complement(result_str, 4)
-    result = result*0.00690750 # 단위는 microstrain
+    result = result*0.02889922 # 단위는 microstrain
     return result
 
 # 220506 갱신 : 변위 변환 수식 수정 완료

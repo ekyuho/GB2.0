@@ -419,8 +419,11 @@ def set_config_data(jdata):
     board_setting['sensorSelect'] =   int(np.uint16(0x0100))
     board_setting['highTemp'] =       int(np.int16(jdata['TP']['st1high']*100))
     board_setting['lowTemp'] =        int(np.int16(jdata['TP']['st1low']*100))
-    board_setting['highDisp'] =       int(np.uint16((jdata['DI']['st1high']*692.9678+16339000)/1024))
-    board_setting['lowDisp'] =        int(np.uint16((jdata['DI']['st1low']*692.9678+16339000)/1024))
+    #old equations. to enable triggering in GBC, revise this 
+    #board_setting['highDisp'] =       int(np.uint16((jdata['DI']['st1high']*692.9678+16339000)/1024))
+    #board_setting['lowDisp'] =        int(np.uint16((jdata['DI']['st1low']*692.9678+16339000)/1024))
+    board_setting['highDisp'] =       int(np.uint16(0))
+    board_setting['lowDisp'] =        int(np.uint16(0))
 
     ###############
     board_setting['highStrain'] =     int(np.int16(0)) # strain의 보드 설정을 위한 코드 수정 필요
